@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{7994EFBC-C8C3-4966-B6EB-0F4D9AC5B31D}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.lessons PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="lessons/Advanced-Interface-Design/lesson-1/dist/css/style.css">
+    <Files>
+      <File FileName="lessons/Advanced-Interface-Design/lesson-1/dist/css/style.css" Line="12" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lessons" expanded="True">
+            <Node name="lessons" expanded="True">
+              <Node name="Advanced-Interface-Design" expanded="True">
+                <Node name="lesson-1" expanded="True">
+                  <Node name="dist" expanded="True">
+                    <Node name="css" expanded="True">
+                      <Node name="style.css" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

@@ -14,23 +14,23 @@
 
 	</head>
 	<!-- STEP 10: The body is a scrollable container, so add data-bs-spy="scroll" and data-bs-target="#pageNav" (the id of the navigation element to be controlled) -->
-	<body>
+	<body data-bs-spy="scroll" data-bs-target="#pageNav">
 		<!-- STEP 3: Add a DIV for the container class -->
-		<div>
+		<div class="container-fluid">
 		<!-- STEP 4: Add a DIV for a row class -->
-			<div>
+			<div class="row">
 				<!-- STEP 5: Set the HEADER as a full-width column -->
-				<header>
+				<header class="col-12">
 					<h1>Different Types of Cheese</h1>	
 					<!-- Global navigation for the site would go here -->		
 				</header>
 			</div>
 			<!-- STEP 6: Create a DIV for another row -->
-			<div>
+			<div class="row">
 				<!-- STEP 7: Set the NAV as a column (span of 4) and add a unique id -->
-				<nav>
+				<nav class="col-4" id="pageNav">
 				<!-- STEP 9: Add class="sticky-top" to the UL element below so it stays on the page while scrolling -->
-					<ul>
+					<ul class="sticky-top">
 						<li><a href="#b1" title="">Fresh Cheeses</a>
 							<ul>
 								<li><a href="#b1c1" title="">Cottage Cheese</a></li>
@@ -68,7 +68,7 @@
 					</ul>
 				</nav>
 				<!-- STEP 8: Set the MAIN as a column as well (span of 8) -->
-				<main>
+				<main class="col-8">
 					<section>
 						<!-- Thanks to http://www.cheeseipsum.co.uk/ -->
 						<h2>Cheese is Awesome</h2>

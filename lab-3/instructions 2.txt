@@ -1,0 +1,25 @@
+Working With the Bootstrap Accordion
+
+DESCRIPTION
+
+Modify the ScrollSpy page to incorporate an Accordion component.
+
+INSTRUCTIONS
+
+While keeping the Bootstrap documentation page open for the Accordion component as a reference, attempt the below challenges.
+
+
+Open the page featuring four different categories of cheese that we worked on in class.
+Surround the four <section> elements with a <div> that will function as the main Accordion component container.
+
+Modify each of the four <section> elements so that they will each function as an accordion-item.
+
+Within each of the four sections, identify what content will go inside a new <div> element (or some other suitable containing element) for the accordion-collapse.
+
+Inside each of the accordion-collapse <div> elements, nest another element (of your choice) to serve as the accordion-body.
+Build out each accordion-header - you may need to move the image of cheese to somewhere inside the accordion-body somewhere and maybe float it to the right side of the page (use one of the utility classes in Bootstrap for this).
+Add all of the required class, id, and data-bs-* attributes and values to get the accordion working the way that you think makes most sense.
+Try to use some of the navigation Bootstrap components to improve the visual appearance of the navigation panel on the left (a bit of a challenge).
+
+
+When you are finished, provide a live URL to the working interface (maybe on GitHub Pages) in the submission text area below.

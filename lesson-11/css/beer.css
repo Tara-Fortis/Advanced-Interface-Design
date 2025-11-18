@@ -42,20 +42,20 @@ a:hover {
   /* grid styles */
   display: grid;
   /* STEP 1: This will result in four columns, each one of 1fr */
-  
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   /* STEP 3: This is the same as grid-template-columns: 1fr 1fr 1fr 1fr; */
-  
+  /* grid-template-columns: repeat(4, 1fr); */
   /* STEP 5: Set a minmax for each column */
-  
+  /* grid-template-columns: repeat(4, minmax(240px, 1fr)); */
   /* STEP 2: This will result in two rows, each one of 300px */
-  
+  /* grid-template-rows: 300px; */
   /* STEP 4: This is the same as grid-template-rows: 300px 300px; */
-  
+  /* grid-template-rows: repeat(2, 300px); */
   /* STEP 6: Reduce the rows to one */
-  
+  grid-template-rows: 300px;
 
-  /* STEP 7: Include the auto-fit property into the mix */
-  
+  /* STEP 7: Include the auto-fit property into the mix (and change minmax to clamp()!)*/
+  grid-template-columns: repeat( auto-fit, clamp(240px, 25%, 300px));
   align-items: center;
 }
 
@@ -89,8 +89,8 @@ a:hover {
   margin: 0;
   display: grid;
   /* STEP 8: Modify the breweries grid into a responsive layout with repeat(), auto-fit, and minmax() */
-  
-  grid-gap: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .breweries > ul > li {

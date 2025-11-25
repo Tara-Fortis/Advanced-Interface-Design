@@ -79,7 +79,7 @@ h2, h3 {
 #transforms h3:nth-of-type(7) {
 	display: inline-block;
 	outline: 3px dashed green;
-	transform: scale(3) translate(30px, -50px) rotate(20deg) skew(30deg, 20deg);
+	transform: scale(2) translate(50px, 50px) rotate(20deg) skew(30deg, 20deg);
 }
 
 /* TRANSITIONS
@@ -94,6 +94,7 @@ h2, h3 {
 	transition-duration: 1s;
 }
 #transitions h3:nth-of-type(1):hover {
+	display: inline-block;
 	background-color: hotpink;
 	transform: scale(1.5)
 }
@@ -110,6 +111,7 @@ h2, h3 {
 	transition-delay: 0.5s;
 }
 #transitions h3:nth-of-type(2):hover {
+	display: inline-block;
 	transform: translateX(100px);
 }
 
@@ -125,13 +127,22 @@ h2, h3 {
 	transition-timing-function: ease-in-out;
 }
 #transitions h3:nth-of-type(3):hover {
-	transform: translateX(150px)
+	transform: translateX(150px);
 }
 
 /* STEP 15: Combining Transitions */
 #transitions h3:nth-of-type(4) {
+display: inline-block;
+height: 200px;
+width: 300px;
+transition-property: background-color, width, height;
+transition-duration: 1s, 2s, 0.5s;
+transition-delay: 0.5s, 0.25s, 2s;
 }
 #transitions h3:nth-of-type(4):hover {
+	background-color: red;
+	width: 400px;
+	height: 500px;
 }
 
 
@@ -139,4 +150,31 @@ h2, h3 {
 -------------------------------------------------- */
 
 footer p {
+	display: inline-block;
+	background-color: limegreen;
+	font-weight: bold;
+	position: relative;
+	left: 0;
+	/* Animations */
+	animation-name: slidein;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes slidein {
+	from {
+		left: 0;
+	}
+	25% {
+		left: 50px;
+		font-size: 150%;
+		background-color: yellow;
+	}
+	75% {
+		left: 125px;
+	}
+	to {
+		left: 150px;
+	}
 }

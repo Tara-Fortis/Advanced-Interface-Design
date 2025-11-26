@@ -1,16 +1,35 @@
-// STEP 1: Get the SVG and its viewBox width
+// Calculate bar width
 let svg = document.querySelector("svg");
+console.log(svg);
+
+// split the viewBox value into an array
 let viewBox = svg.getAttribute("viewBox").split(" ");
-let viewBoxWidth = parseInt(viewBox[2], 10); // index 2 = width
+console.log(viewBox);
 
-// STEP 2: Capture the % value from the text element
+// [0, 0, 500, 500] get the third value or viewBox[2]
+viewBox = viewBox[2];
+
+// convert viewBox into an interger
+viewBox = parseInt(viewBox, 10);
+console.log(viewBox);
+
+// get the text from <text> and remove the %
 let percent = document.querySelector("svg text").textContent;
-percent = percent.replace("%", "");
-percent = parseInt(percent, 10) / 100; // convert to decimal
+percent = percent.replaceAll("%", "");
+percent = parseInt(percent, 10);
+console.log(percent);
 
-// STEP 3: Calculate the rectangle width as a fraction of the viewBox width
-let rectWidth = percent * viewBoxWidth;
+// get the external CSS
+const cssRulesList = document.styleSheets[0].cssRules;
+console.log(cssRulesList);
+let svgActiveRule;
 
-// STEP 4: Update the rectangle's width attribute
-let rect = document.querySelector("#rectangle");
-rect.setAttribute("width", rectWidth);
+for (let i = 0; i < cssRulesList.length; i++) {
+    if (cssRulesList[i].selectorText === "svg:active #rectangle") {
+        svgActiveRule = cssRulesList[i];
+    }
+}
+console.log(svgActiveRule);
+
+percent = `${percent}%`;
+svgActiveRule.style.setProperty("width", percent);

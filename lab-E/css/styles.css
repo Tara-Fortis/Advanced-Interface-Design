@@ -1,19 +1,15 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
-body {
-    margin: 1em;
-}
-
 svg {
     outline: 5px dotted red;
     width: 50%;
     height: auto;
 }
 
-#rectangle {
-    width: 0;
-    transition: width 0.5s ease-out;
+#rectangle,
+#rectangle2 {
+    transition: all 0.5s;
 }
 
 svg:hover {
@@ -21,8 +17,7 @@ svg:hover {
 }
 
 svg:active #rectangle {
-    width: 500;
-    color: cornflowerblue;
+    width: 0%;
 }
 
 text {

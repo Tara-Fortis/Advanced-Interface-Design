@@ -23,18 +23,18 @@ const cssRulesList = document.styleSheets[0].cssRules;
 console.log(cssRulesList);
 
 // STEP 15: Loop through the CSS rules to capture the one that controls the :active state for the circle
-// let svgActiveRule;
-// for (let i = 0; i < cssRulesList.length; i++) {
-//     if (cssRulesList[i].selectorText == "svg:active #pieWedge ") {
-//         // found the rule we want!!
-//         console.log("Yay!");
-//         svgActiveRule = cssRulesList[i];
-//     }
-// }
+let svgActiveRule;
+for (let i = 0; i < cssRulesList.length; i++) {
+    if (cssRulesList[i].selectorText == "svg:active #pieWedge") {
+        // found the rule we want!!
+        console.log("Yay!");
+        svgActiveRule = cssRulesList[i];
+    }
+}
 
 // STEP 16: Build the string for the new CSS property value
-// let propertyValue = pieWidth + " " + length;
-// console.log(propertyValue);
+let propertyValue = pieWidth + " " + length;
+console.log(propertyValue);
 
 // STEP 17: Update the CSS declaration to reflect the new property value for stroke-dasharray
-// svgActiveRule.style.setProperty("stroke-dasharray", propertyValue);
+svgActiveRule.style.setProperty("stroke-dasharray", propertyValue);
